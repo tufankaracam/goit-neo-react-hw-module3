@@ -4,9 +4,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { IoPersonAdd } from "react-icons/io5";
 
-
-
-
 export default function ContactForm({ addContact }) {
   const nameId = useId();
   const numberId = useId();
@@ -27,7 +24,7 @@ export default function ContactForm({ addContact }) {
         .required("Required"),
     }),
     onSubmit: (values, actions) => {
-      addContact(values)
+      addContact(values);
       actions.resetForm();
     },
   });
@@ -47,10 +44,10 @@ export default function ContactForm({ addContact }) {
         />
         {formik.touched.name && formik.errors.name ? (
           <div className={styles.error} name="name">
-          {formik.errors.name}
-        </div>
+            {formik.errors.name}
+          </div>
         ) : null}
-        
+
         <label htmlFor={numberId}>Number</label>
         <input
           className={styles.input}
@@ -67,7 +64,10 @@ export default function ContactForm({ addContact }) {
           </div>
         ) : null}
 
-        <button type="submit" className={styles.submit}><span>Add Contact</span><IoPersonAdd /></button>
+        <button type="submit" className={styles.submit}>
+          <span>Add Contact</span>
+          <IoPersonAdd />
+        </button>
       </form>
     </div>
   );

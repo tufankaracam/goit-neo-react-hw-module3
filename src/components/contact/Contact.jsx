@@ -3,7 +3,7 @@ import { IoMdPerson } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
 import { AiOutlineDelete } from "react-icons/ai";
 
-export default function Contact({ data ,deleteContact}) {
+export default function Contact({ data, deleteContact }) {
   return (
     <div className={styles.card}>
       <div className={styles.left}>
@@ -15,7 +15,12 @@ export default function Contact({ data ,deleteContact}) {
         </div>
       </div>
       <div className={styles.right}>
-        <button className={styles.button} onClick={()=>{deleteContact(data?.id)}}>
+        <button
+          className={styles.button}
+          onClick={() => {
+            deleteContact(data?.id);
+          }}
+        >
           <AiOutlineDelete />
         </button>
       </div>

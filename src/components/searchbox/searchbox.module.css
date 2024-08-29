@@ -1,11 +1,11 @@
-.container{
-    width: 275px;
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
+.container {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
 }
 
-.container input{
-    height: 29px;
-    border-radius: 7px;
+.container input {
+  height: 29px;
+  border-radius: 7px;
 }
