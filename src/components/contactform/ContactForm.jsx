@@ -1,5 +1,5 @@
 import styles from "./contactform.module.css";
-import { useId } from "react";
+import { useId, useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { IoPersonAdd } from "react-icons/io5";
@@ -7,6 +7,7 @@ import { IoPersonAdd } from "react-icons/io5";
 export default function ContactForm({ addContact }) {
   const nameId = useId();
   const numberId = useId();
+  const nameRef = useRef();
 
   const formik = useFormik({
     initialValues: {
@@ -26,6 +27,7 @@ export default function ContactForm({ addContact }) {
     onSubmit: (values, actions) => {
       addContact(values);
       actions.resetForm();
+      nameRef.current.focus();
     },
   });
 
@@ -37,9 +39,9 @@ export default function ContactForm({ addContact }) {
           className={styles.input}
           type="text"
           name="name"
+          ref={nameRef}
           id={nameId}
           onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
           value={formik.values.name}
         />
         {formik.touched.name && formik.errors.name ? (
@@ -55,7 +57,6 @@ export default function ContactForm({ addContact }) {
           name="number"
           id={numberId}
           onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
           value={formik.values.number}
         />
         {formik.touched.number && formik.errors.number ? (

@@ -36,7 +36,6 @@ function App() {
   }, [contacts]);
 
   const addContact = (contact) => {
-    console.log(contact);
     const newContact = {
       id: nanoid(),
       name: contact.name,
