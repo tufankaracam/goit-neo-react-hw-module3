@@ -1,0 +1,42 @@
+.card {
+  border: 1px solid rgb(111, 111, 111);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 300;
+  width: 275px;
+}
+
+
+.left div {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 7px;
+  font-size: 21px;
+}
+
+.button {
+  padding: 7px;
+  border: none;
+  background-color: crimson;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  border-radius: 50%;
+}
+
+.button:hover {
+  background-color: rgb(218, 102, 125);
+}
+
+.button:active {
+  background-color: rgb(128, 20, 41);
+}

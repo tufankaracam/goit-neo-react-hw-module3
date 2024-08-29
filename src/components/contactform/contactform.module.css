@@ -1,0 +1,51 @@
+.container{
+    border: 1px solid rgb(111,111, 111);
+    border-radius: 5px;
+    width: 275px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container  form{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.container label{
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 300;
+
+}
+
+.input{
+    height: 29px;
+}
+
+.error{
+    font-size: 13px;
+    color: red;
+}
+
+.submit{
+    width: 101px;
+    align-self: center;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    color: rgb(28, 106, 224);
+}
+
+.submit > *:nth-child(1){
+    font-size: 11px;
+}
+
+.submit > *:nth-child(2){
+    font-size: 21px;
+    margin-left: 5px;
+}
+
